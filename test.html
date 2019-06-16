@@ -3,28 +3,60 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
+
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- CSS FOR SEARCH BAR -->
+	<style> 
+		input[type=text] 
+		{
+		  width: 270px;
+		  float: right;
+		  box-sizing: border-box;
+		  border: 2px solid #ccc;
+		  border-radius: 4px;
+		  font-size: 16px;
+		  background-color: white;
+		  background-image: url('searchIcon.png');
+		  background-size: 30px 30px;
+		  background-position: left; 
+		  background-repeat: no-repeat;
+		  padding: 12px 20px 12px 35px;
+		  /*
+		  -webkit-transition: width 0.4s ease-in-out;
+		  transition: width 0.4s ease-in-out;
+		  */
+		}
+		/*
+		input[type=text]:focus 
+		{
+		  width: 100%;
+		}
+		*/
+	</style>
+
 </head>
 
 <body>
 
+	<!-- SIDE NAVIGATION BAR -->
 	<div id="sideNav" class="sideNav">
+		<!-- CLOSE OUT X BUTTON -->
 		<a href="javascript:void(0)" class="closebtn"
 	   onclick="closeNav()">&times;</a>
+	   <!-- NAVIGATION ITEMS -->
 		<a href="#">HOME</a>
 		<a href="#">PROFILE</a>
-		<a href="#">SEARCH</a>
 		<a href="#">SETTINGS</a>
 	</div>
-	<!-- element to open side nav-->
+	<!-- LINE ICON TO OPEN NAVIGATION -->
 	<span onclick="openNav()" class="navBar">
 		<i class="material-icons navCursor w3-xxxlarge">view_headline</i>
 	</span>
 
 
-<!-- MAIN MAIN MAIN CONTENT -->
+<!-- MAIN MAIN MAIN CONTENT ENTIRE THING-->
 <div id="main">
 	<div class="content">
 
@@ -36,7 +68,9 @@
 
 	<div class="searchBar">
 
-		<p>search search</p>
+		<form>
+  			<input onfocusin="expand()" onfocusout="contract()" id = "locateBar" type="text" name="search" placeholder="Search Junkyard...">
+		</form>
 
 	</div>
 
@@ -50,12 +84,12 @@
 
 
 
-	<div class="row">
+	<div class="row" id="row">
 
 		<div class="column left">
 			
 			<!-- CARD 1 IN COLUMN -->
-			<div class="w3-card-4 w3-section">
+			<div class="w3-card w3-section" id="tarjeta" onmouseover="showShadow()" onmouseout="hideShadow()">
 				<div class="w3-container">
 					<p>username</p>
 				</div>
@@ -73,7 +107,7 @@
 			</div>
 
 			<!-- CARD 2 IN COLUMN -->
-			<div class="w3-card-4 w3-section">
+			<div class="w3-card w3-section" id="tarjeta" onmouseover="showShadow()" onmouseout="hideShadow()">
 				<div class="w3-container">
 					<p>username</p>
 				</div>
@@ -97,7 +131,7 @@
 		<div class="column middle">
 
 			<!-- CARD 1 IN COLUMN -->
-			<div class="w3-card-4 w3-section">
+			<div class="w3-card w3-section" id="tarjeta" onmouseover="showShadow()" onmouseout="hideShadow()">
 				<div class="w3-container">
 					<p>username</p>
 				</div>
@@ -115,7 +149,7 @@
 			</div>
 
 			<!-- CARD 2 IN COLUMN -->
-			<div class="w3-card-4 w3-section">
+			<div class="w3-card w3-section" id="tarjeta" onmouseover="showShadow()" onmouseout="hideShadow()">
 				<div class="w3-container">
 					<p>username</p>
 				</div>
@@ -137,7 +171,7 @@
 		<div class="column right">
 
 			<!-- CARD 1 IN COLUMN -->
-			<div class="w3-card-4 w3-section">
+			<div class="w3-card w3-section" id="tarjeta" onmouseover="showShadow()" onmouseout="hideShadow()">
 				<div class="w3-container">
 					<p>username</p>
 				</div>
@@ -155,7 +189,7 @@
 			</div>
 
 			<!-- CARD 2 IN COLUMN -->
-			<div class="w3-card-4 w3-section">
+			<div class="w3-card w3-section" id="tarjeta" onmouseover="showShadow()" onmouseout="hideShadow()">
 				<div class="w3-container">
 					<p>username</p>
 				</div>
@@ -193,6 +227,28 @@
 		document.getElementById("sideNav").style.width = "0";
 		document.getElementById("main").style.marginLeft = "0";
 		document.body.style.backgroundColor = "white";
+	}
+	function expand() {
+		document.getElementById("locateBar").style.width = "100%";
+		document.getElementById("locateBar").style.transition = "all 1s";
+		//document.getElementById("locateBar").style.webkit-transition = "all 1s";
+		document.getElementById("row").style.marginTop = "95px";
+		document.getElementById("row").style.transition = "all 1s";
+		//document.getElementById("row").style.webkit-transition = "all 1s";
+	}
+	function contract() {
+		document.getElementById("locateBar").style.width = "270px";
+		document.getElementById("locateBar").style.transition = "all 1s";
+		//document.getElementById("locateBar").style.webkit-transition = "all 1s";
+		document.getElementById("row").style.marginTop = "20px"
+		document.getElementById("row").style.transition = "all 1s";
+		//document.getElementById("row").style.webkit-transition = "all 1s";
+	}
+	function showShadow() {
+		document.getElementById("tarjeta").className = "w3-card-4 w3-section";
+	}
+	function hideShadow() {
+		document.getElementById("tarjeta").className = "w3-card w3-section";
 	}
 
 </script>
