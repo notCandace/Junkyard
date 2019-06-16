@@ -8,7 +8,7 @@
 
 <style>
 
-body
+.body
 {
 	box-sizing: border-box;
 }
@@ -73,14 +73,16 @@ body
 </head>
 
 <body>
-<button class="open-button" onclick="openForm()">Settings</button>
-<div class = "form-popup" id = "myForm">
-	<form action = "main.html" class = "form-container">
-		<h1 style = "padding-left: 5px; padding-right: 5px;"> Smell You Later...</h1>
+<div class="body">
+    <button class="open-button" onclick="openForm()">Settings</button>
+    <div class = "form-popup" id = "myForm" style="display: none;">
+		<form action = "main.html" class = "form-container">
+			<h1 style = "padding-left: 5px; padding-right: 5px;"> Smell You Later...</h1>
 
-		<button type = "submit" class = "btn"> Log out </button>
-		<button type = "button" class = "btn cancel" onclick="closeForm()">Close</button> 
-	</form>
+			<button type = "submit" class = "btn"> Log out </button>
+			<button type = "button" class = "btn cancel" onclick="closeForm()">Close</button> 
+		</form>
+	</div>
 </div>
 
 <script>

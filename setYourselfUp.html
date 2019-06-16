@@ -42,6 +42,60 @@ p
 	background-size: contain;
 }
 
+.open-button
+{
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.form-popup
+{
+  display: none;
+  position: fixed;
+  left: 600px;
+  top: 300px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container
+{
+  max-width: 400px;
+  max-height: 600px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container .btn 
+{
+  background-color: #DCDEF4;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel 
+{
+  background-color: #D46A6A;
+}
+
+.form-container .btn:hover, .open-button:hover 
+{
+  opacity: 1;
+}
+
 </style>
 
 </head>
@@ -56,7 +110,16 @@ p
 	   <!-- NAVIGATION ITEMS -->
 		<a href="main.html">HOME</a>
 		<a href="setYourselfUp.html">PROFILE</a>
-		<a href="#">SETTINGS</a>
+		<button class="open-button" onclick="openForm()">Settings</button>
+
+		<div class = "form-popup" id = "myForm" style="display: none;">
+		<form action = "index.html" class = "form-container">
+			<h1 style = "padding-left: 5px; padding-right: 5px;"> Smell You Later...</h1>
+
+			<button type = "submit" class = "btn">Log out </button>
+			<button type = "button" class = "btn cancel" onclick="closeForm()">Close</button> 
+		</form>
+	</div>
 	</div>
 	<!-- LINE ICON TO OPEN NAVIGATION -->
 	<span class="navBar">
@@ -76,10 +139,11 @@ p
 <div id="main" class="w3-card-4" style="width:50%;display: block; margin: 0 auto;">
 
 	<img src = "user.png" alt = "profile picture" style="width:250px;height:250px;display: block;margin: 0 auto;">
-
-	<p>Name: John Doe</p>
-	<p>Username: notJohnDoe </p>
-	<p>Items listed: 2 </p>
+	<div style="display:block;margin-right: auto;margin-left: auto;text-align: center;">
+		<p>Name: John Doe</p>
+		<p>Username: notJohnDoe </p>
+		<p>Items listed: 2 </p>
+	</div>
 	<br>
 	<p style="text-align:center;"> "Junk" </p>
 
@@ -117,6 +181,15 @@ p
 		document.getElementById("locateBar").style.transition = "all 0.5s";
 		document.getElementById("memo").style.transition = "all 0.5s";
 		document.body.style.backgroundColor = "#839D4A";
+	}
+	function openForm()
+	{
+		document.getElementById("myForm").style.display = "block";
+	}
+
+	function closeForm()
+	{
+		document.getElementById("myForm").style.display = "none";
 	}
 </script>
 

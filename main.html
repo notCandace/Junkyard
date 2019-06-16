@@ -3,7 +3,8 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -50,7 +51,17 @@
 	   <!-- NAVIGATION ITEMS -->
 		<a href="main.html">HOME</a>
 		<a href="setYourselfUp.html">PROFILE</a>
-		<a href="#">SETTINGS</a>
+		<button class="open-button" onclick="openForm()">Settings</button>
+
+		<div class = "form-popup" id = "myForm" style="display: none;">
+		<form action = "index.html" class = "form-container">
+			<h1 style = "padding-left: 5px; padding-right: 5px;"> Smell You Later...</h1>
+
+			<button type = "submit" class = "btn">Log out </button>
+			<button type = "button" class = "btn cancel" onclick="closeForm()">Close</button> 
+		</form>
+	</div>
+
 	</div>
 	<!-- LINE ICON TO OPEN NAVIGATION -->
 	<span class="navBar">
@@ -96,7 +107,7 @@
 			<!-- CARD 1 IN COLUMN -->
 			<div class="w3-card w3-section">
 				<div class="w3-container topColor">
-					<p>myr_i_am <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+					<p class="cursive">myr_i_am <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="https://i.ebayimg.com/images/g/~MwAAOSw64xcWum3/s-l800.jpg" alt="item" style="width: 100%">
 				<div class="w3-container lowCardColor">
@@ -114,7 +125,7 @@
 			<!-- CARD 2 IN COLUMN -->
 			<div class="w3-card w3-section">
 				<div class="w3-container topColor">
-					<p>anna_tendler <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+					<p class="cursive">anna_tendler <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="https://cdn.shopify.com/s/files/1/0384/2861/products/vintage-coffee-grinder-table-lamp_1024x1024.jpg" alt="item" style="width: 100%">
 				<div class="w3-container lowCardColor">
@@ -132,7 +143,7 @@
 			<!-- CARD 3 IN COLUMN -->
 			<div class="w3-card w3-section vision" id="01">
 				<div class="w3-container topColor">
-					<p>orangeMan <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+					<p class="cursive">orangeMan <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="https://www.dhresource.com/0x0s/f2-albu-g8-M00-E1-81-rBVaVFyZyNGAUWHMAAQ0MbKDFZI831.jpg/best-price-good-performance-toughbook-cf.jpg" alt="item" style="width: 100%">
 				<div class="w3-container lowCardColor">
@@ -150,7 +161,7 @@
 			<!-- CARD 4 IN COLUMN -->
 			<div class="w3-card w3-section vision" id="04">
 				<div class="w3-container topColor">
-					<p>elderCarol <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+					<p class="cursive">elderCarol <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="https://www.jimlaabsmusicstore.com/wp-content/plugins/wp-easycart-data/products/pics1/Untitled_3dcc42d74baae86142e7b1f62bdc4512.png" alt="item" style="width: 100%">
 				<div class="w3-container lowCardColor">
@@ -174,7 +185,7 @@
 			<!-- CARD 1 IN COLUMN -->
 			<div class="w3-card w3-section">
 				<div class="w3-container topColor">
-					<p>sleepy_claire <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+					<p class="cursive">sleepy_claire <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="https://www.givingplants.com/media/catalog/product/cache/6/image/9df78eab33525d08d6e5fb8d27136e95/_/d/_dsc4169.jpg" alt="item" style="width: 100%">
 				<div class="w3-container lowCardColor">
@@ -192,7 +203,7 @@
 			<!-- CARD 2 IN COLUMN -->
 			<div class="w3-card w3-section">
 				<div class="w3-container topColor">
-					<p>kenzhatesbread <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+					<p class="cursive">kenzhatesbread <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="https://cdn01.pinkoi.com/product/Fa6TrLYr/0/800x0.jpg" alt="item" style="width: 100%">
 				<div class="w3-container lowCardColor">
@@ -210,7 +221,7 @@
 			<!-- CARD 3 IN COLUMN -->
 			<div class="w3-card w3-section vision" id="02">
 				<div class="w3-container topColor">
-					<p>hydroHomies <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+					<p class="cursive">hydroHomies <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="http://brightsidestore.com/wp-content/uploads/2018/08/New-Kpop-ARMY-BTS-Bangtan-Boys-BT21-Official-The-Same-Gradient-Frosted-Glass-Water-Bottle-Sorry.jpg" alt="item" style="width: 100%">
 				<div class="w3-container lowCardColor">
@@ -228,7 +239,7 @@
 			<!-- CARD 4 IN COLUMN -->
 			<div class="w3-card w3-section vision" id="05">
 				<div class="w3-container topColor">
-					<p>sewSweet <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+					<p class="cursive">sewSweet <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="https://media.rainpos.com/2226/bernina_560.jpg" alt="item" style="width: 100%">
 				<div class="w3-container lowCardColor">
@@ -250,7 +261,7 @@
 			<!-- CARD 1 IN COLUMN -->
 			<div class="w3-card w3-section">
 				<div class="w3-container topColor">
-					<p>john_mulaney <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+					<p class="cursive">john_mulaney <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="http://thedevilsgear.com/getimage.asp?id=/bikes/clouseout_bikes/&mode=9&filename=IMG_9365.jpg" alt="item" style="width: 100%">
 				<div class="w3-container lowCardColor">
@@ -268,7 +279,7 @@
 			<!-- CARD 2 IN COLUMN -->
 			<div class="w3-card w3-section">
 				<div class="w3-container topColor">
-					<p>scottyusher <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+					<p class="cursive">scottyusher <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="https://www.greencleandesigns.com/wp-content/uploads/2019/01/l-shaped-desks-lees-summit-greencleandesigns.com_.jpg" alt="item" style="width: 100%">
 				<div class="w3-container lowCardColor">
@@ -286,7 +297,7 @@
 			<!-- CARD 3 IN COLUMN -->
 			<div class="w3-card w3-section vision" id="03">
 				<div class="w3-container topColor">
-					<p>walktheearth <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+					<p class="cursive">walktheearth <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="https://shop.r10s.jp/kanteikyoku-nishikisan/cabinet/_006/1240001010190_1.jpg" alt="item" style="width: 100%">
 				<div class="w3-container lowCardColor">
@@ -304,7 +315,7 @@
 			<!-- CARD 4 IN COLUMN -->
 			<div class="w3-card w3-section vision" id="06">
 				<div class="w3-container topColor">
-					<p>craftyCathy <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+					<p class="cursive">craftyCathy <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="http://electric-eraser.com/wp-content/uploads/2016/08/sg16800003.jpg" alt="item" style="width: 100%">
 				<div class="w3-container lowCardColor">
@@ -372,6 +383,15 @@
 	    if (event.target == modal) {
 	        modal.style.display = "none";
 	    }
+	}
+	function openForm()
+	{
+		document.getElementById("myForm").style.display = "block";
+	}
+
+	function closeForm()
+	{
+		document.getElementById("myForm").style.display = "none";
 	}
 </script>
 
