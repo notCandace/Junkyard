@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- CSS FOR SEARCH BAR -->
 	<style> 
 		input[type=text] 
@@ -47,14 +48,17 @@
 		<a href="javascript:void(0)" class="closebtn"
 	   onclick="closeNav()">&times;</a>
 	   <!-- NAVIGATION ITEMS -->
-		<a href="#">HOME</a>
-		<a href="#">PROFILE</a>
+		<a href="main.html">HOME</a>
+		<a href="setYourselfUp.html">PROFILE</a>
 		<a href="#">SETTINGS</a>
 	</div>
 	<!-- LINE ICON TO OPEN NAVIGATION -->
-	<span onclick="openNav()" class="navBar">
-		<i class="material-icons navCursor w3-xxxlarge">view_headline</i>
+	<span class="navBar">
+		<i class="material-icons navCursor w3-xxxlarge" onclick="openNav()">view_headline</i>
+		<a href="post.html"><i class="fa fa-plus-square-o navCursor w3-xxxlarge" 
+		   style="position: absolute;bottom:10px;margin-left:-40px;"></i></a>
 	</span>
+	
 
 
 <!-- MAIN MAIN MAIN CONTENT ENTIRE THING-->
@@ -92,10 +96,10 @@
 			<!-- CARD 1 IN COLUMN -->
 			<div class="w3-card w3-section">
 				<div class="w3-container topColor">
-					<p>myr_i_am&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="mail.png" alt="mail icon" style= "width: 7%"> </p>
+					<p>myr_i_am <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="https://i.ebayimg.com/images/g/~MwAAOSw64xcWum3/s-l800.jpg" alt="item" style="width: 100%">
-				<div class="w3-container w3-white">
+				<div class="w3-container lowCardColor">
 					<p><strong>Description:</strong></p>
 						<p style="font-size: 12px">
 							Lightly worn sneakers need a new owner.
@@ -110,10 +114,10 @@
 			<!-- CARD 2 IN COLUMN -->
 			<div class="w3-card w3-section">
 				<div class="w3-container topColor">
-					<p>anna_tendler&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="mail.png" alt="mail icon" style= "width: 7%"> </p>
+					<p>anna_tendler <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="https://cdn.shopify.com/s/files/1/0384/2861/products/vintage-coffee-grinder-table-lamp_1024x1024.jpg" alt="item" style="width: 100%">
-				<div class="w3-container w3-white">
+				<div class="w3-container lowCardColor">
 					<p><strong>Description:</strong></p>
 						<p style="font-size: 12px">
 							I'm giving away this antique lamp from 1915.
@@ -121,6 +125,42 @@
 					<p><strong>Location:</strong></p>
 						<p style="font-size: 12px">
 							San Diego region meetups.
+						</p>
+				</div>
+			</div>
+
+			<!-- CARD 3 IN COLUMN -->
+			<div class="w3-card w3-section vision" id="01">
+				<div class="w3-container topColor">
+					<p>myr_i_am <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+				</div>
+				<img src="https://i.ebayimg.com/images/g/~MwAAOSw64xcWum3/s-l800.jpg" alt="item" style="width: 100%">
+				<div class="w3-container lowCardColor">
+					<p><strong>Description:</strong></p>
+						<p style="font-size: 12px">
+							Lightly worn sneakers need a new owner.
+						</p>
+					<p><strong>Location:</strong></p>
+						<p style="font-size: 12px">
+							Inland Empire region.
+						</p>
+				</div>
+			</div>
+
+			<!-- CARD 4 IN COLUMN -->
+			<div class="w3-card w3-section vision" id="04">
+				<div class="w3-container topColor">
+					<p>myr_i_am <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+				</div>
+				<img src="https://i.ebayimg.com/images/g/~MwAAOSw64xcWum3/s-l800.jpg" alt="item" style="width: 100%">
+				<div class="w3-container lowCardColor">
+					<p><strong>Description:</strong></p>
+						<p style="font-size: 12px">
+							Lightly worn sneakers need a new owner.
+						</p>
+					<p><strong>Location:</strong></p>
+						<p style="font-size: 12px">
+							Inland Empire region.
 						</p>
 				</div>
 			</div>
@@ -134,10 +174,10 @@
 			<!-- CARD 1 IN COLUMN -->
 			<div class="w3-card w3-section">
 				<div class="w3-container topColor">
-					<p>sleepy_claire &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="mail.png" alt="mail icon" style= "width: 7%"> </p>
+					<p>sleepy_claire <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="https://www.givingplants.com/media/catalog/product/cache/6/image/9df78eab33525d08d6e5fb8d27136e95/_/d/_dsc4169.jpg" alt="item" style="width: 100%">
-				<div class="w3-container w3-white">
+				<div class="w3-container lowCardColor">
 					<p><strong>Description:</strong></p>
 						<p style="font-size: 12px">
 							Succulents, requires sun but little watering.
@@ -152,10 +192,10 @@
 			<!-- CARD 2 IN COLUMN -->
 			<div class="w3-card w3-section">
 				<div class="w3-container topColor">
-					<p>kenzhatesbread&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="mail.png" alt="mail icon" style= "width: 7%"> </p>
+					<p>kenzhatesbread <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="https://cdn01.pinkoi.com/product/Fa6TrLYr/0/800x0.jpg" alt="item" style="width: 100%">
-				<div class="w3-container w3-white">
+				<div class="w3-container lowCardColor">
 					<p><strong>Description:</strong></p>
 						<p style="font-size: 12px">
 							My hat from a decades school spirit day.
@@ -167,6 +207,42 @@
 				</div>
 			</div>
 
+			<!-- CARD 3 IN COLUMN -->
+			<div class="w3-card w3-section vision" id="02">
+				<div class="w3-container topColor">
+					<p>sleepy_claire <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+				</div>
+				<img src="https://www.givingplants.com/media/catalog/product/cache/6/image/9df78eab33525d08d6e5fb8d27136e95/_/d/_dsc4169.jpg" alt="item" style="width: 100%">
+				<div class="w3-container lowCardColor">
+					<p><strong>Description:</strong></p>
+						<p style="font-size: 12px">
+							Succulents, requires sun but little watering.
+						</p>
+					<p><strong>Location:</strong></p>
+						<p style="font-size: 12px">
+							I live in Eastvale.
+						</p>
+				</div>
+			</div>
+
+			<!-- CARD 4 IN COLUMN -->
+			<div class="w3-card w3-section vision" id="05">
+				<div class="w3-container topColor">
+					<p>sleepy_claire <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+				</div>
+				<img src="https://www.givingplants.com/media/catalog/product/cache/6/image/9df78eab33525d08d6e5fb8d27136e95/_/d/_dsc4169.jpg" alt="item" style="width: 100%">
+				<div class="w3-container lowCardColor">
+					<p><strong>Description:</strong></p>
+						<p style="font-size: 12px">
+							Succulents, requires sun but little watering.
+						</p>
+					<p><strong>Location:</strong></p>
+						<p style="font-size: 12px">
+							I live in Eastvale.
+						</p>
+				</div>
+			</div>
+
 		</div>
 
 		<div class="column right">
@@ -174,10 +250,10 @@
 			<!-- CARD 1 IN COLUMN -->
 			<div class="w3-card w3-section">
 				<div class="w3-container topColor">
-					<p>john_mulaney&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="mail.png" alt="mail icon" style= "width: 7%"> </p>
+					<p>john_mulaney <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="http://thedevilsgear.com/getimage.asp?id=/bikes/clouseout_bikes/&mode=9&filename=IMG_9365.jpg" alt="item" style="width: 100%">
-				<div class="w3-container w3-white">
+				<div class="w3-container lowCardColor">
 					<p><strong>Description:</strong></p>
 						<p style="font-size: 12px">
 							I'm new in town and don't need a bike.
@@ -192,10 +268,10 @@
 			<!-- CARD 2 IN COLUMN -->
 			<div class="w3-card w3-section">
 				<div class="w3-container topColor">
-					<p>scottyusher&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="mail.png" alt="mail icon" style= "width: 7%"> </p>
+					<p>scottyusher <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
 				</div>
 				<img src="https://www.greencleandesigns.com/wp-content/uploads/2019/01/l-shaped-desks-lees-summit-greencleandesigns.com_.jpg" alt="item" style="width: 100%">
-				<div class="w3-container w3-white">
+				<div class="w3-container lowCardColor">
 					<p><strong>Description:</strong></p>
 						<p style="font-size: 12px">
 							Walnut desk, chipping on bottom right side.
@@ -203,6 +279,42 @@
 					<p><strong>Location:</strong></p>
 						<p style="font-size: 12px">
 							Grendale High School in Oregon.
+						</p>
+				</div>
+			</div>
+
+			<!-- CARD 3 IN COLUMN -->
+			<div class="w3-card w3-section vision" id="03">
+				<div class="w3-container topColor">
+					<p>john_mulaney <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+				</div>
+				<img src="http://thedevilsgear.com/getimage.asp?id=/bikes/clouseout_bikes/&mode=9&filename=IMG_9365.jpg" alt="item" style="width: 100%">
+				<div class="w3-container lowCardColor">
+					<p><strong>Description:</strong></p>
+						<p style="font-size: 12px">
+							I'm new in town and don't need a bike.
+						</p>
+					<p><strong>Location:</strong></p>
+						<p style="font-size: 12px">
+							New York, 60th street.
+						</p>
+				</div>
+			</div>
+
+			<!-- CARD 4 IN COLUMN -->
+			<div class="w3-card w3-section vision" id="06">
+				<div class="w3-container topColor">
+					<p>john_mulaney <img src="mail.png" alt="mail icon" style= "width: 7%; float: right;"> </p>
+				</div>
+				<img src="http://thedevilsgear.com/getimage.asp?id=/bikes/clouseout_bikes/&mode=9&filename=IMG_9365.jpg" alt="item" style="width: 100%">
+				<div class="w3-container lowCardColor">
+					<p><strong>Description:</strong></p>
+						<p style="font-size: 12px">
+							I'm new in town and don't need a bike.
+						</p>
+					<p><strong>Location:</strong></p>
+						<p style="font-size: 12px">
+							New York, 60th street.
 						</p>
 				</div>
 			</div>
@@ -226,7 +338,7 @@
 		document.getElementById("memo").style.width = "215px";
 		document.getElementById("locateBar").style.transition = "all 0.5s";
 		document.getElementById("memo").style.transition = "all 0.5s";
-		document.body.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
+		document.body.style.backgroundColor = "#555";
 	}
 	function closeNav() {
 		document.getElementById("sideNav").style.width = "0";
@@ -235,7 +347,7 @@
 		document.getElementById("memo").style.width = "20%";
 		document.getElementById("locateBar").style.transition = "all 0.5s";
 		document.getElementById("memo").style.transition = "all 0.5s";
-		document.body.style.backgroundColor = "white";
+		document.body.style.backgroundColor = "#839D4A";
 	}
 	function expand() {
 		document.getElementById("locateBar").style.width = "100%";

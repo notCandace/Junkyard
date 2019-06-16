@@ -114,8 +114,15 @@ body {
 	padding-right: 10px;
 }
 .w3-card:hover {
-	box-shadow: 2px 3px 7px rgba(0, 0, 0, .5);
+	box-shadow: 2px 3px 9px rgba(0, 0, 0, .5);
 }
 .topColor {
 	background-image: linear-gradient(to right, #f7edd4, #f7cac3);;
+}
+.lowCardColor {
+	background-image: linear-gradient(to right, #f7edd4, #f7cac3);;
+}
+.vision {
+	visibility: hidden;
+	display: none;
 }

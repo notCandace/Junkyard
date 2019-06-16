@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+
+		body {
+			background-color: #839D4A;
+		}
+		.postBanner {
+			background-color: #839D4A;
+			height: 125px;
+			border: 2px solid #333;
+			/*background-image: url("junkyard.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;*/
+		}
+		input[type = text], input[type = password] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			
+		}
+		button {
+			background-color: #DCDEF4; /* pastel purple*/
+			color: purple;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 20%;
+			text-align: center;
+			font-size: 100%;
+		}
+
+button:hover
+{
+	opacity: 0.5;
+}
+
+
+
+
+
+	</style>
+</head>
+
+<body>
+
+
+	<!-- SIDE NAVIGATION BAR -->
+	<div id="sideNav" class="sideNav">
+		<!-- CLOSE OUT X BUTTON -->
+		<a href="javascript:void(0)" class="closebtn"
+	   onclick="closeNav()">&times;</a>
+	   <!-- NAVIGATION ITEMS -->
+		<a href="main.html">HOME</a>
+		<a href="setYourselfUp.html">PROFILE</a>
+		<a href="#">SETTINGS</a>
+	</div>
+	<!-- LINE ICON TO OPEN NAVIGATION -->
+	<span class="navBar">
+		<i class="material-icons navCursor w3-xxxlarge" onclick="openNav()">view_headline</i>
+		<a href="post.html"><i class="fa fa-plus-square-o navCursor w3-xxxlarge" 
+		   style="position: absolute;bottom:10px;margin-left:-40px;"></i></a>
+	</span>
+
+
+	<div id="main">
+
+		<div class="content">
+
+			<div class="postBanner"></div>
+
+		</div>
+
+		<div class="w3-card w3-section" style="width:40%;display:block;margin:0 auto;">
+				<div class="w3-container" style="background-color:#f5fddf">
+					<p>username</p>
+				</div>
+				<div class="w3-container lowCardColor">
+					<form action = "main.html">
+						<label><strong>Description:</strong></label>
+							<input type="text" placeholder="Describe your Item" name="desc" id="desc" required>
+						<label><strong>Location:</strong></label>
+							<input type="text" placeholder="State your Location" name="loc" id="loc" required>
+
+						<button type="submit" onsubmit="addPost()" style ="width: 70%;display: block;margin: 0 auto; margin-bottom: 10px"> Post</button>
+					</form>
+				</div>
+			</div>
+
+	</div>
+
+
+
+
+</body>
+
+<script>
+	function openNav() {
+		document.getElementById("sideNav").style.width = "250px";
+		document.getElementById("main").style.marginLeft = "200px";
+		document.getElementById("locateBar").style.width = "215px";
+		document.getElementById("memo").style.width = "215px";
+		document.getElementById("locateBar").style.transition = "all 0.5s";
+		document.getElementById("memo").style.transition = "all 0.5s";
+		document.body.style.backgroundColor = "#839D4A";
+	}
+	function closeNav() {
+		document.getElementById("sideNav").style.width = "0";
+		document.getElementById("main").style.marginLeft = "0";
+		document.getElementById("locateBar").style.width = "22%";
+		document.getElementById("memo").style.width = "20%";
+		document.getElementById("locateBar").style.transition = "all 0.5s";
+		document.getElementById("memo").style.transition = "all 0.5s";
+		document.body.style.backgroundColor = "#839D4A";
+	}
+	function expand() {
+		document.getElementById("locateBar").style.width = "100%";
+		document.getElementById("locateBar").style.transition = "all 1s";
+		//document.getElementById("locateBar").style.webkit-transition = "all 1s";
+		document.getElementById("row").style.marginTop = "95px";
+		document.getElementById("row").style.transition = "all 1s";
+		//document.getElementById("row").style.webkit-transition = "all 1s";
+	}
+	function contract() {
+		document.getElementById("locateBar").style.width = "270px";
+		document.getElementById("locateBar").style.transition = "all 1s";
+		//document.getElementById("locateBar").style.webkit-transition = "all 1s";
+		document.getElementById("row").style.marginTop = "20px"
+		document.getElementById("row").style.transition = "all 1s";
+		//document.getElementById("row").style.webkit-transition = "all 1s";
+	}
+	var exp = document.getElementById("desc").value;
+	var pos = document.getElementById("loc").value;
+	function addPost() {
+		document.getElementByClassName("vision").style.visibility = "visible";
+		document.getElementByClassName("vision").style.display = "block";
+	}
+</script>
+
+
+</html>

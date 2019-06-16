@@ -5,9 +5,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>the Junkyardigans</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-
+body {
+	background-color: #839D4A;
+}
 img
 {
 	margin-left: 5%;
@@ -22,40 +29,63 @@ p
 
 	padding-right: 40%;
 }
+.content {
+	/* border: 2px solid #333; */
+	margin-left: 65px;
+}
 
 </style>
 
+</head>
 
 <body>
-<h1 style = "text-align: center; padding-top: 10px; margin-left: 7%;"> Profile </h1>
 
-<div style = "margin-left: 33%;">
+<!-- SIDE NAVIGATION BAR -->
+	<div id="sideNav" class="sideNav" style="margin-top: -30px">
+		<!-- CLOSE OUT X BUTTON -->
+		<a href="javascript:void(0)" class="closebtn"
+	   onclick="closeNav()">&times;</a>
+	   <!-- NAVIGATION ITEMS -->
+		<a href="main.html">HOME</a>
+		<a href="setYourselfUp.html">PROFILE</a>
+		<a href="#">SETTINGS</a>
+	</div>
+	<!-- LINE ICON TO OPEN NAVIGATION -->
+	<span class="navBar">
+		<i class="material-icons navCursor w3-xxxlarge" onclick="openNav()">view_headline</i>
+		<i class="fa fa-plus-square-o navCursor w3-xxxlarge" onclick="addPost()" 
+		   style="position: absolute;bottom:10px;margin-left:-40px;"></i>
+	</span>
 
-<img src = "user.png" alt = "profile picture">
+	<div class="content">
 
-<p> Name: John Doe</p>
+		<div>
+			<h1 style = "text-align: center; padding-top: 10px; margin-left: 7%;"> Profile </h1>
+		</div>
 
-<br>
+	</div>
+	
 
-<p>Username: notJohnDoe </p>
 
-<br>
+<div id="main" class="w3-card-4" style="width:40%;display: block; margin: 0 auto;">
 
-<p> Items listed: 2 </p>
+	<img src = "user.png" alt = "profile picture" style="width:250px;height:250px;display: block;margin: 0 auto;">
 
-<br>
+	<p>Name: John Doe</p>
+	<p>Username: notJohnDoe </p>
+	<p>Items listed: 2 </p>
+	<br>
+	<p style="text-align:center;"> "Junk" </p>
 
-<p> "Junk" </p>
+	<br>
 
-<br>
+	<img src = "https://images.vinted.net/thumbs/f800/0422a_gqognCQqVYZ4AfdpwFXjBnM5.jpeg?1552369626$0a314d9e14f73c97d1d6814cad4822459267904e" alt = "old shoes" style = "width:200px;height:200px;">
 
-<img src = "https://images.vinted.net/thumbs/f800/0422a_gqognCQqVYZ4AfdpwFXjBnM5.jpeg?1552369626$0a314d9e14f73c97d1d6814cad4822459267904e" alt = "old shoes" style = "padding-top: 50px; margin-bottom: -10px;">
+	<p> Some old shoes without any holes. <br> <br>Located in Los Angeles, CA </p>
 
-<p> Some old shoes without any holes. <br> <br>Located in Los Angeles, CA </p>
+	<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSmvj4OAXOrGTeDX6yzABzfXfzMvDy3bu1R4geh_-YhgqLMQaA5A" alt = "german clock" style = "width:200px;height:200px">
 
-<img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSmvj4OAXOrGTeDX6yzABzfXfzMvDy3bu1R4geh_-YhgqLMQaA5A" alt = "german clock" style = "padding-top: 15px;">
-
-<p> Vintage alarm clock in very good condition. <br> <br> Located in Los Angeles, CA</p>
+	<p> Vintage alarm clock in very good condition. <br> <br> Located in Los Angeles, CA</p>
 
 </div>
 
@@ -63,9 +93,29 @@ p
 
 </body>
 
+<script>
+	function openNav() {
+		document.getElementById("sideNav").style.width = "250px";
+		document.getElementById("main").style.marginLeft = "200px";
+		document.getElementById("locateBar").style.width = "215px";
+		document.getElementById("memo").style.width = "215px";
+		document.getElementById("locateBar").style.transition = "all 0.5s";
+		document.getElementById("memo").style.transition = "all 0.5s";
+		document.body.style.backgroundColor = "#839D4A";
+	}
+	function closeNav() {
+		document.getElementById("sideNav").style.width = "0";
+		document.getElementById("main").style.marginLeft = "0";
+		document.getElementById("locateBar").style.width = "22%";
+		document.getElementById("memo").style.width = "20%";
+		document.getElementById("locateBar").style.transition = "all 0.5s";
+		document.getElementById("memo").style.transition = "all 0.5s";
+		document.body.style.backgroundColor = "#839D4A";
+	}
+</script>
 
 
 
-</head>
+
 
 </html>
