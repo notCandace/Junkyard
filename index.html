@@ -19,7 +19,7 @@
 		padding: 12px 20px;
 		margin: 8px 0;
 		display: inline-block;
-		border: 1px solid #ccc;
+		border: 0px solid #ccc;
 		box-sizing: border-box;
 		border-radius: 8px;}
 	button {
@@ -168,7 +168,7 @@
 		background-color: rgba(0,0,0,0.4);
 		padding-top: 60px;}
 	.modal-content {
-		background-color: #839D4a;
+		background-color: #b7e060;
 		margin: 5% auto 15% auto;
 		/* 5% from the top, 15% from the bottom and centered */
 		border: 0px solid #888; width: 30%;
@@ -198,7 +198,6 @@
 </style>
 
 <head>
-	/* The font for the buttons */
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 
@@ -244,7 +243,7 @@
 	<span onclick="document.getElementById('id01').style.display='none'" class = "close" title = "CLose Modal"> &times; </span>
 
 <!-- modal content  also what is a modal -->
-	<form class = "modal-content animate" action = "/action_page.php">
+	<form class = "modal-content animate" action = "main.html">
 		<h2 align="center"> <br><strong>LOGIN</strong></h2>
 		<div class = "imgcontainer">
 			<img src = "user.png" alt = "Avatar" class = "avatar" style= "vertical-align: middle">
@@ -258,7 +257,7 @@
 			<input type ="password" placeholder = "Enter Password" name = "psw" required>
 
 			<div style ="margin-left: 100px">
-			<button type="submit" style ="width: 70%"> Login </button>
+			<button type="submit" style ="width: 70%; border-radius: 5px"> Login </button>
 			</div>
 
 			<!-- the remember me check box -->
@@ -267,7 +266,7 @@
 			</div>
 
 		<div class = "container" style = "background-color: #ADCEEE">
-			<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+			<button type="button" onclick="document.getElementById('id01').style.display='none'" style= "border-radius: 5px" class="cancelbtn">Cancel</button>
 			<span class = "psw"> <a href="http://www.nooooooooooooooo.com/"> Forgot password?</a></span>
 		</div>
 	</form>
@@ -278,7 +277,7 @@
 	<span onclick="document.getElementById('id02').style.display='none'" class = "close" title = "CLose Modal"> &times; </span>
 
 <!-- modal content  also what is a modal -->
-	<form class = "modal-content animate" action = "/action_page.php">
+	<form class = "modal-content animate" action = "main.html">
 		<h2 align="center"><br><strong>CREATE ACCOUNT</strong></h2>
 		<div class = "imgcontainer">
 			<img src = "user.png" alt = "Avatar" class = "avatar">
@@ -298,12 +297,12 @@
 			<input type ="password" placeholder = "..." name = "psw2" required>
 
 			<div style ="margin-left: 100px">
-			<button type="submit" style ="width: 70%"> Join now </button>
+			<button type="submit" style ="width: 70%; border-radius: 5px"> Join now </button>
 			</div>
 			</div>
 
 		<div class = "container" style = "background-color: #ADCEEE">
-			<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+			<button type="button" onclick="document.getElementById('id02').style.display='none'" style= "border-radius: 5px" class="cancelbtn">Cancel</button>
 		</div>
 	</form>
 </div>
