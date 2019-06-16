@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang= "en-US">
+
+<style>
+	/* Basic style changes */
+	body{background-color: #839d4a;}
+	h1 {text-align: center;}
+	h4 {text-align: center; font-size: 20px;}
+	img {text-align: center; position: relative; left: 400px;}
+	* {box-sizing: border-box;}
+	img {vertical-align: middle;}
+	input[type = text], input[type = password] {width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;}
+	button {background-color: #DCDEF4; /* pastel purple*/ color: purple; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 20%; text-align: center; font-size: 100%; }
+	button: hover {opacity: 0.5;}
+
+	/* Automatic slideshow */
+    .mySlides {display: none;}
+    .slideshow-container {width: 1500px; position: static;}
+    .active {background-color: #717171;}
+    .fade {-webkit-animation-name: fade; -webkit-animation-duration: 5s; animation-name: fade; animation-duration: 1.5s;}
+    .dot {height: 15px; width: 15px; margin: 0px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;}
+	@-webkit-keyframes fade {from {opacity: .4} to {opacity: 1}}
+	@keyframes fade {from {opacity: .4} to {opacity: 1}}
+
+	/* Registration and login buttons */
+	.button1 {display: inline-block; border-radius: 15px; background-image: linear-gradient(to right, #ff7e5e, #f49e42); border: none; color: #FFFFFF; text-align: center; font-size: 22px; padding: 10px; width: 200px; transition: all 0.5s; cursor: pointer; margin: 5px; font-family: 'Roboto Condensed', sans-serif; position: relative; left: 400px;}
+	.button1 span {cursor: pointer; display: inline-block; position: relative; transition: 0.5s;}
+	.button1 span:after {content: '\00bb'; position: absolute; opacity: 0; top: 0;  right: -20px; transition: 0.5s;}
+	.button1:hover span {padding-right: 25px;}
+	.button1:hover span:after {opacity: 1; right: 0;}
+
+	.button2 {display: inline-block; border-radius: 15px; background-image: linear-gradient(to right, #ff7e5e, #f49e42);border: none; color: #FFFFFF; text-align: center; font-size: 22px; padding: 10px; width: 200px; transition: all 0.5s; cursor: pointer; margin: 5px; font-family: 'Roboto Condensed', sans-serif; position: relative; left: 600px;}
+	.button2 span {cursor: pointer; display: inline-block; position: relative; transition: 0.5s;}
+	.button2 span:after {content: '\00bb'; position: absolute; opacity: 0; top: 0;  right: -20px; transition: 0.5s;}
+	.button2:hover span {padding-right: 25px;}
+	.button2:hover span:after {opacity: 1; right: 0;}
+
+	/* Myriam's stuff */
+	.cancelbtn {width: auto; padding: 10px 18px; background-color: #DCDEF4; /* purple */}
+	.imgcontainer {text-align: center; margin: 24px 0 12px 0; position: relative;}
+	img.avatar {width: 40%; height: 40%; border-radius: 50%;}
+	.container {padding: 16px;}
+	span.psw {float: right; padding-top: 16px;}
+	@media screen and (max-width: 300px){
+		span.psw {display: block; float: none;}
+		.cancelbtn {width: 100%;}
+	}
+	.modal {display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(255,248,248); background-color: rgba(0,0,0,0.4); padding-top: 60px;}
+	.modal-content {background-color: #ADCEEE; margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */ border: 1px solid #888; width: 30%; /* changes size of the login box */ border-radius: 10px; font-family: Roboto Condensed;}
+	.close {position: absolute; right: 5px; top: 0; color: #000; font-size: 35px; font-weight: bold;}
+	.close:hover,
+	.close:focus {color:red; cursor: pointer;}
+	.animate { -webkit-animation: animatezoom 0.6s; animation: animatezoom 0.6s}
+	@-webkit-keyframes animatezoom{
+	from{-webkit-transform: scale(0)}
+	to(-webkit-transform: scale(1))}
+	@keyframes animatezoom{
+	from{transform: scale(0)}
+	to{transform: scale(1)}}
+
+</style>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="slideshow-container" style = "padding-right: 1050px">
+
+	<div class="mySlides fade">
+ 	 <img src="slide1.png" style="width:150%">
+	</div>
+
+	<div class="mySlides fade">
+	  <img src="slide2.png" style="width:150%">
+	</div>
+
+	<div class="mySlides fade">
+	  <img src="slide3.png" style="width:150%">
+	</div>
+
+	<div class="mySlides fade">
+	  <img src="slide4.png" style="width:150%">
+	</div>
+
+	</div>
+	<br>
+
+	<div style="text-align:center">
+  	<span class="dot"></span> 
+  	<span class="dot"></span> 
+  	<span class="dot"></span> 
+  	<span class="dot"></span> 
+	</div>
+
+	<img src="junkyard.png" alt="Logo">
+	<h4> <i>Start perusing for your next golden find. </i></h4>
+	<button id = "clickonthis" class = "button1" style = "vertical-align:middle" onclick="document.getElementById('id02').style.display='block'">
+		<span>New here?</span></button>
+
+	<button id = "trigger" class = "button2" style = "vertical-align:middle" onclick="document.getElementById('id01').style.display='block'">
+		<span>Returner?</span></button>
+
+		<div id = "id01" class = "modal">
+	<span onclick="document.getElementById('id01').style.display='none'" class = "close" title = "CLose Modal"> &times; </span>
+
+<!-- modal content  also what is a modal -->
+	<form class = "modal-content animate" action = "/action_page.php">
+		<h2 align="center"> <strong>LOGIN</strong></h2>
+		<div class = "imgcontainer">
+			<img src = "user.png" alt = "Avatar" class = "avatar">
+		</div>
+
+		<div class = "container">
+			<label for = "uname"> <b> Username </b></label>
+			<input type = "text" placeholder = "Enter Username" name = "uname" required>
+
+			<label for = "psw"> <b> Password </b></label>
+			<input type ="password" placeholder = "Enter Password" name = "psw" required>
+
+			<div style ="margin-left: 100px">
+			<button type="submit" style ="width: 70%"> Login </button>
+			</div>
+
+			<!-- the remember me check box -->
+			<label>
+				<input type = "checkbox" checked = "checked" name = "remember"> <font size = "2.5">Remember me</font> </label>
+			</div>
+
+		<div class = "container" style = "background-color: #ADCEEE">
+			<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+			<span class = "psw"> <a href="http://www.nooooooooooooooo.com/"> Forgot password?</a></span>
+		</div>
+	</form>
+</div>
+
+/* Claire's stuff */
+		<div id = "id02" class = "modal">
+	<span onclick="document.getElementById('id02').style.display='none'" class = "close" title = "CLose Modal"> &times; </span>
+
+<!-- modal content  also what is a modal -->
+	<form class = "modal-content animate" action = "/action_page.php">
+		<h2 align="center"> <strong>CREATE ACCOUNT</strong></h2>
+		<div class = "imgcontainer">
+			<img src = "user.png" alt = "Avatar" class = "avatar">
+		</div>
+
+		<div class = "container">
+			<label for = "name"> <b> Name </b></label>
+			<input type = "text" placeholder = "Your full name" name = "name" required>
+
+			<label for = "uname"> <b> Username </b></label>
+			<input type = "text" placeholder = "Choose a username" name = "uname" required>
+
+			<label for = "psw"> <b> Password </b></label>
+			<input type ="password" placeholder = "Choose a password" name = "psw" required>
+
+			<label for = "psw"> <b> Confirm password </b></label>
+			<input type ="password" placeholder = "..." name = "psw2" required>
+
+			<div style ="margin-left: 100px">
+			<button type="submit" style ="width: 70%"> Join now </button>
+			</div>
+			</div>
+
+		<div class = "container" style = "background-color: #ADCEEE">
+			<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+		</div>
+	</form>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000);
+}
+</script>
+
+</body>
+
+</html>
