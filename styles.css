@@ -117,5 +117,5 @@ body {
 	box-shadow: 2px 3px 7px rgba(0, 0, 0, .5);
 }
 .topColor {
-	background-color: #D8AA96;
+	background-image: linear-gradient(to right, #f7edd4, #f7cac3);;
 }
