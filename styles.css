@@ -1,5 +1,9 @@
 body {
-	background: #e6e6e6;
+	background: #fff;
+}
+.banner {
+	background-color: #839D4A;
+	height: 125px;
 }
 .navBar {
 	background-color: #555;
@@ -104,4 +108,9 @@ body {
 	padding-left: 10px;
 	padding-right: 10px;
 }
-
+.w3-card:hover {
+	box-shadow: 2px 3px 7px rgba(0, 0, 0, .5);
+}
+.topColor {
+	background-color: #eeffc9;
+}
