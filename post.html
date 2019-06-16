@@ -13,12 +13,11 @@
 		}
 		.postBanner {
 			background-color: #839D4A;
-			height: 125px;
-			border: 2px solid #333;
-			/*background-image: url("junkyard.png");
+			height: 150px;
+			background-image: url("junk trunk.png");
 			background-repeat: no-repeat;
 			background-position: center;
-			background-size: contain;*/
+			background-size: contain;
 		}
 		input[type = text], input[type = password] {
 			width: 100%;
@@ -84,10 +83,15 @@ button:hover
 
 		<div class="w3-card w3-section" style="width:40%;display:block;margin:0 auto;">
 				<div class="w3-container" style="background-color:#f5fddf">
-					<p>username</p>
+					<div>
+						<p></p>
+						<br>
+					</div>
 				</div>
 				<div class="w3-container lowCardColor">
 					<form action = "main.html">
+						<label><strong>Image URL:</strong></label>
+							<input type="text" placeholder="Paste Image URL" name="url" required id="url">
 						<label><strong>Description:</strong></label>
 							<input type="text" placeholder="Describe your Item" name="desc" id="desc" required>
 						<label><strong>Location:</strong></label>
@@ -142,6 +146,7 @@ button:hover
 	}
 	var exp = document.getElementById("desc").value;
 	var pos = document.getElementById("loc").value;
+	var url = document.getElementById("url").value;
 	function addPost() {
 		document.getElementByClassName("vision").style.visibility = "visible";
 		document.getElementByClassName("vision").style.display = "block";
