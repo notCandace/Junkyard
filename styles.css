@@ -4,6 +4,10 @@ body {
 .banner {
 	background-color: #839D4A;
 	height: 125px;
+	background-image: url("junkyard.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
 }
 .navBar {
 	background-color: #555;
