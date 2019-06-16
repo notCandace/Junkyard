@@ -1,0 +1,103 @@
+body {
+	background: #e6e6e6;
+}
+.navBar {
+	background-color: #555;
+	height: 100%;
+	display: block;
+	width: 65px;
+	position: fixed;
+}
+.navCursor {
+	cursor: pointer;
+}
+.sideNav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #333;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.5s;
+	position: fixed;
+}
+.sideNav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s
+}
+.sideNav a:hover {
+	color: #f1f1f1;
+}
+.sideNav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+#main {
+	transition: margin-left .5s;
+	padding: 20px;
+}
+@media screen and (max-height: 450px) {
+	.sideNav {padding-top: 15px;}
+	.sideNav a {font-size: 18px;}
+}
+.content {
+	border: 2px solid #333;
+	margin-left: 65px;
+}
+.wordReport {
+	border: 2px solid #333;
+	margin-left: 65px;
+	margin-top: 85px;
+	width: 20%;
+	height: 45px;
+	position: absolute;
+	right: 20px;
+	position: fixed;
+
+}
+.searchBar {
+	border: 2px solid #333;
+	margin-left: 65px;
+	margin-top: 20px;
+	width: 20%;
+	height: 45px;
+	position: absolute;
+	right: 20px;
+	position: fixed;
+}
+.row {
+	border: 2px solid #333;
+	margin-left: 65px;
+	height: 100%;
+	margin-top: 20px;
+	width: 73%;
+}
+.column {
+	border: 2px dotted #777;
+	float: left;
+	width: 50%;
+}
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.left {
+	width: 50%;
+}
+.right {
+	width: 50%;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
